@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ClientCertAuthWebApi.Models.Student>
+
+@{
+    ViewBag.Title = "title";
+    //Layout = "Shared/_Layout";
+}
+
+<h2>Ściśle tajne oceny końcowe</h2>
+
+<table class="table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>University</th>
+        <th>Group</th>
+        <th>Final Grade</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <th>@student.Name</th>
+            <th>@student.Surname</th>
+            <th>@student.University</th>
+            <th>@student.Group</th>
+            <th>@student.Grade</th>
+        </tr>
+    }
+    </tbody>
+</table>
